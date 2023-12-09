@@ -11,7 +11,6 @@ body * {
 body {
   background-color: #E2E3E5;
   min-height: 100vh;
-  max-height: 100vh;
   overflow-y: hidden;
   background-image: url(../images/at-st.jpg);
   background-size: cover;
@@ -35,11 +34,15 @@ ul>li>ul>li {
 #result-container {
   visibility: hidden;
 }
-
+.or{
+  text-align: center;
+  color: black;
+  margin: 10px 0 20px 0;
+}
 .spinner {
   visibility: hidden;
   position: absolute;
-  top: 50vh;
+  top: 68vh;
   left: 50vw;
   width: 120px;
   height: 120px;
@@ -47,6 +50,13 @@ ul>li>ul>li {
   -webkit-animation: spin 1s linear infinite;
   -moz-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
+}
+.section-list{
+  background: #fff;
+  border-radius: 4px;
+  border: none;
+  width: 100px;
+  margin-right: 1px;
 }
 
 @-moz-keyframes spin {

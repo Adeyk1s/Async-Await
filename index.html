@@ -32,11 +32,27 @@
     <section class="section">
       <div class="column is-half is-offset-2">
         <div id="byQueryBlock" class="search">
-          <input class="is-large input" type="text" placeholder="Search...">
+          <select class="section-list">
+            <option value="people" selected>people</option>
+            <option value="planet">planet</option>
+            <option value="species">species</option>
+          </select>
+          <input class="is-large input" id="query-search" type="text" placeholder="Search...">
           <button id="byQueryBtn" class="is-large button">Search</button>
+        </div>
+        <p class="or">OR</p>
+        <div class="search">
+          <select class="section-list">
+            <option value="people" selected>people</option>
+            <option value="planet">planet</option>
+            <option value="species">species</option>
+          </select>
+          <input class="is-large input" id="id-search" type="text" placeholder="Get by id...">
+          <button id="byIdBtn" class="is-large button">Get by id</button>
         </div>
       </div>
     </section>
+
 
     <div class="spinnerContainer">
       <img class="spinner" src="images/dv.png" alt="">
