@@ -52,16 +52,14 @@ function cleanSerch() {
 
 async function listSearchQuery(serchFunction, species, input) {
   let result = await serchFunction(input);
-  if(input == inputQuery){
+  if(input == inputQuery.value){
   result = result.results[0];
   }
   if (result !== undefined && result) {
     messageHeader.innerHTML = result.name;
     if (species == "people") {
       cleanSerch();
-      let planet = await starWars.getPlanetsById(
-        result.homeworld.split("/").at(-2)
-      );
+      let planet = await starWars.getPlanetsById(result.homeworld.split("/").at(-2));
       for (let key in result) {
         if (key == "homeworld") {
           messageBody.innerHTML += `${key}: ${planet.name}<br>`;
